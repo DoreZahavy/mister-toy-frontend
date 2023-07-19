@@ -1,0 +1,11 @@
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $clr5;
+    height: 80px;
+    box-shadow: 0px -8px 0px 0px rgba($clr2,0.75);
+    img{
+        width: 80px;
+    }
+}

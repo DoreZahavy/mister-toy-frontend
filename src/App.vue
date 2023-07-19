@@ -19,9 +19,9 @@
 </script>
 
 <template>
-	
-	<AppHeader />
-	<RouterView />
-	<AppFooter />
-
+	<main class="main-layout">
+		<AppHeader />
+		<RouterView class="router-view"/>
+		<AppFooter />
+	</main>
 </template>

@@ -18,7 +18,7 @@ async function getById(toyId) {
 }
 
 async function remove(toyId) {
-	httpService.delete(`toy/${toyId}`)
+	return httpService.delete(`toy/${toyId}`)
 }
 
 async function save(toy) {

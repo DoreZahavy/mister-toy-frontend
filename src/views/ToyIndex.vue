@@ -4,6 +4,8 @@ import ToyList from '@/components/ToyList.vue'
 import ToyFilter from '@/components/ToyFilter.vue'
 import Spinner from '@/components/Spinner.vue'
 
+
+
 export default {
     data() {
         return {}
@@ -48,16 +50,21 @@ export default {
 </script>
 
 <template>
-    <section v-if="toys" class="shop-page router-view">
-        <h1>The Shop</h1>
+    <section v-if="toys" class="toy-index router-view">
         <ToyFilter @filter="setFilter" @direction="changeSortDir"/>
-        <RouterLink to="/toy/edit">Add a toy</RouterLink>
-        <ToyList :toys="toys" @remove="removeToy" />
-        <section class="pagination">
-            <button @click="getPage(-1)" :disabled="!pageIdx">Prev</button>
-            <p>{{ currPage }}</p>
-            <button @click="getPage(1)" :disabled="pageIdx + 1 === maxPageCount">Next</button>
+        <RouterLink class="add-btn" to="/toy/edit">Add a toy</RouterLink>
+
+        <section class="toy-carousel">
+            <i @click="getPage(-1)" :disabled="!pageIdx" class="fa-solid fa-caret-left fa-3x"></i>
+            <ToyList :toys="toys" @remove="removeToy" />
+            <i @click="getPage(1)" :disabled="pageIdx + 1 === maxPageCount" class="fa-solid fa-caret-right fa-3x"></i>
         </section>
+
+        <p class="pagination">{{ currPage }}</p>
+        <!-- <section class="pagination"> -->
+            <!-- <button @click="getPage(-1)" :disabled="!pageIdx"><img src='../assets/svg/caret-left.svg' alt=""></button> -->
+            <!-- <button @click="getPage(1)" :disabled="pageIdx + 1 === maxPageCount">Next</button> -->
+        <!-- </section> -->
     </section>
     <section v-else class="Spinner">
         <Spinner />

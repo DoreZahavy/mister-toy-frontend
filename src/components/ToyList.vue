@@ -19,18 +19,15 @@ export default {
 </script>
 
 <template>
-    <section class="toy-list">
-        <ul>
-            <li v-for="toy in toys">
+        <ul class="toy-list">
+            <li v-for="toy in toys" :key="toy._id" class="toy-card">
                 <ToyPreview :toy="toy" />
                 <section class="actions">
-                    <!-- <button @click="addToCart(toy)">Add to Cart</button>
-                        <button @click="updateToy(toy)">Edit</button> -->
-                    <RouterLink :to="'/toy/'+toy._id">Details</RouterLink>
-                    <RouterLink :to="'/toy/edit/'+toy._id">Edit</RouterLink>
-                    <button @click="removeToy(toy._id)">x</button>
+                    <RouterLink :to="'/toy/'+toy._id"><i class="fa-solid fa-circle-info"></i></RouterLink>
+                    <RouterLink :to="'/toy/edit/'+toy._id"><i class="fa-solid fa-pen-to-square"></i></RouterLink>
+                    <i @click="removeToy(toy._id)" class="fa-sharp fa-solid fa-trash"></i>
+                    <!-- <button @click="removeToy(toy._id)">x</button> -->
                 </section>
             </li>
         </ul>
-    </section>
 </template>

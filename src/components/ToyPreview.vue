@@ -9,7 +9,7 @@ export default {
 
 <template>
     <article class="toy-preview">
-        <h3>{{ toy.name }}</h3>
-        <h4>{{ toy.price }}</h4>
+        <h2>{{ toy.name }}</h2>
+        <h4>${{ toy.price }}</h4>
     </article>
 </template>

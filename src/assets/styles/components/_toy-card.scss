@@ -1,0 +1,26 @@
+.toy-card{
+    display: grid;
+    background-color: #fff;
+    // border: 1px solid $clr2;
+    border-radius: 1em;
+    padding: .8em;
+    width: 140px;
+    transition: box-shadow 0.22s;
+    &:hover{
+        box-shadow: 1px 2px 3px 0 rgba($clr2,0.302),1px 2px 3px 2px rgba($clr2,0.149);
+    }
+    .actions{
+        i{
+
+            color: $clr4;
+        }
+        place-self: end;
+        > *{
+            margin-inline-start: .4em;
+        }
+    }
+
+    .toy-preview{
+        color: $clr3;
+    }
+}

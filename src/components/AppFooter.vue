@@ -8,7 +8,7 @@
 </script>
 
 <template>
-    <footer>
-        FOOTER
+    <footer class="footer full">
+        <img src="@/assets/img/dore.png" >
     </footer>
 </template>

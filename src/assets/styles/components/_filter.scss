@@ -1,0 +1,13 @@
+.toy-filter{
+    margin-block: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .label-filter{
+        justify-self: end;
+        margin-inline-end: 1em;
+
+    }
+    .more-filter{
+        margin-inline-start: 1em;
+    }
+}
