@@ -1,0 +1,20 @@
+.user-msg {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: calc(fit-content + 1rem);
+    text-transform: capitalize;
+    background-color: white;
+    padding: 0.6rem;
+    padding-inline: 1.5rem;
+    border-radius: 99999vh;
+    font-size: 1.2rem;
+    z-index: 20;
+
+    &.success {
+        border: 2px solid green;
+    }
+    &.error {
+        border: 2px solid red;
+    }
+}

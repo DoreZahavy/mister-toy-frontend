@@ -12,6 +12,7 @@ export default {
 
             <div class="logo"><img src="@/assets/img/logo.png"></div>
             <nav class="nav-bar">
+                <RouterLink to="/user"><i class="fa-solid fa-user"></i></RouterLink>
                 <RouterLink to="/">Home</RouterLink>
                 <RouterLink to="/dashboard">Dashboard</RouterLink>
                 <RouterLink to="/toy">Toys</RouterLink>

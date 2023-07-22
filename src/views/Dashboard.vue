@@ -15,22 +15,16 @@ export default {
     data() {
         return {
             chartOptions: {
-                responsive: true,
-                // maintainAspectRatio: false
+                // responsive: true,
+                // maintainAspectRatio: true
             },
-            chartData: {
-                labels: ['VueJs', 'EmberJs', 'ReactJs', 'AngularJs'],
-                datasets: [
-                    {
-                        backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#DD1B16'],
-                        data: [40, 20, 80, 10]
-                    }
-                ]
-            }
+       
         }
     },
     computed:{
-        
+        chartData(){
+            return this.$store.getters.chartData
+        }
     }
 }
 </script>

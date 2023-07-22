@@ -1,7 +1,10 @@
 <script>
 	import { RouterLink, RouterView } from 'vue-router'
+
 	import AppHeader from './components/AppHeader.vue'
 	import AppFooter from './components/AppFooter.vue'
+	import UserMsg from './components/UserMsg.vue'
+
 	export default {
 		
 		data() {
@@ -14,6 +17,7 @@
 		components: {
 			AppFooter,
 			AppHeader,
+			UserMsg
 		}
 	}
 </script>
@@ -23,5 +27,6 @@
 		<AppHeader />
 		<RouterView class="router-view"/>
 		<AppFooter />
+		<UserMsg />
 	</main>
 </template>

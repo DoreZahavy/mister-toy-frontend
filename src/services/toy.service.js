@@ -5,6 +5,8 @@ export const toyService = {
 	getById,
 	remove,
 	save,
+	addToyMsg,
+	removeToyMsg,
 	getEmptyToy,
 }
 
@@ -26,6 +28,14 @@ async function save(toy) {
 		return httpService.put(`toy/${toy._id}`, toy)
 	}
 	return httpService.post('toy', toy)
+}
+
+async function addToyMsg(toyId,txt){
+	return await httpService.post(`toy/${toyId}/msg`,{txt})
+}
+
+async function removeToyMsg(toyId,msgId){
+	return await httpService.delete(`toy/${toyId}/msg/${msgId}`)
 }
 
 function getEmptyToy() {
